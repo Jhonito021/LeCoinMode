@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Coin Mode - Sublimez votre style</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="navbar">
+        <div class="logo"><i class="fa-solid fa-cart-shopping"></i> Le Coin Mode</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#accueil"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="#apropos"><i class="fas fa-info-circle"></i> À propos</a></li>
+            <li><a href="#produits"><i class="fas fa-shop"></i> Produits</a></li>
+            <li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li>
+        </ul>
+        <div class="mobile-menu" id="mobileMenu"><i class="fas fa-bars"></i></div>
+    </div>
+</header>
+
+<!-- Hero -->
+<!-- Hero Section avec Carousel -->
+<section class="hero" id="accueil">
+    <div class="carousel-container">
+        <div class="carousel-slides">
+            <div class="carousel-slide active">
+                <div class="carousel-bg" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="carousel-content">
+                    <h1>Sublimez votre style chaque jour</h1>
+                    <p>Découvrez notre nouvelle collection d'accessoires uniques</p>
+                    <a href="#produits" class="btn-hero">Voir la collection <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-bg" style="background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="carousel-content">
+                    <h1>Élégance et raffinement</h1>
+                    <p>Des accessoires qui font la différence</p>
+                    <a href="#produits" class="btn-hero">Découvrir <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-bg" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1350&q=80')"></div>
+                <div class="carousel-content">
+                    <h1>La mode à portée de main</h1>
+                    <p>Livraison rapide et paiement sécurisé</p>
+                    <a href="#produits" class="btn-hero">Acheter maintenant <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Boutons de navigation -->
+        <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn next-btn" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Indicateurs -->
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+</section>
+
+<!-- À propos -->
+<section id="apropos">
+    <div class="section-title"><h2>À propos de nous</h2></div>
+    <div class="about-content">
+        <div class="about-text">
+            <p>Bienvenue chez <strong>Le Coin Mode</strong>. Nous croyons que chaque détail compte. C'est pourquoi nous sélectionnons avec passion des accessoires qui ajoutent une touche d'éclat à votre quotidien.</p>
+            <p>Notre boutique s'engage à vous offrir des produits de qualité, alliant modernité et élégance, pour que vous vous sentiez rayonnante à chaque instant.</p>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Boutique de mode">
+        </div>
+    </div>
+</section>
+
+<!-- Produits -->
+<!-- Produits -->
+<section id="produits">
+    <div class="section-title">
+        <h2>Nos produits phares</h2>
+        <p class="section-subtitle">Découvrez notre sélection d'accessoires tendance</p>
+    </div>
+    
+    <!-- Filtres par catégorie -->
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">Tous</button>
+        <button class="filter-btn" data-category="bags">Sacs</button>
+        <button class="filter-btn" data-category="jewelry">Bijoux</button>
+        <button class="filter-btn" data-category="watches">Montres</button>
+        <button class="filter-btn" data-category="accessories">Accessoires</button>
+    </div>
+    
+    <div class="products-grid" id="productsGrid">
+        <!-- Sacs -->
+        <div class="product-card" data-category="bags">
+            <div class="product-badge">Nouveau</div>
+            <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=500&q=80" alt="Sac à main">
+            <h3>Sac à main Chic</h3>
+            <p>Un accessoire indispensable pour une allure élégante</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(45 avis)</span>
+            </div>
+            <p class="price">35 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Sac à main Chic', '35000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <div class="product-card" data-category="bags">
+            <div class="product-badge">-20%</div>
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80" alt="Sac à dos">
+            <h3>Sac à dos Tendance</h3>
+            <p>Sac à dos moderne et pratique au quotidien</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(28 avis)</span>
+            </div>
+            <p class="price"><span class="old-price">55 000 Ar</span> 44 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Sac à dos Tendance', '44000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <div class="product-card" data-category="bags">
+            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=500&q=80" alt="Pochette">
+            <h3>Pochette de Soirée</h3>
+            <p>Élégante et raffinée pour vos soirées</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(52 avis)</span>
+            </div>
+            <p class="price">28 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Pochette de Soirée', '28000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <!-- Bijoux -->
+        <div class="product-card" data-category="jewelry">
+            <div class="product-badge">Best-seller</div>
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=500&q=80" alt="Collier">
+            <h3>Collier Éclat</h3>
+            <p>Sublimez votre décolleté avec ce collier doré</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(89 avis)</span>
+            </div>
+            <p class="price">25 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Collier Éclat', '25000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <div class="product-card" data-category="jewelry">
+            <img src="assets/img/BagueSolitaire.jpeg" alt="Bague">
+            <h3>Bague Solitaire</h3>
+            <p>Bague délicate en argent sterling</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(34 avis)</span>
+            </div>
+            <p class="price">18 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Bague Solitaire', '18000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <div class="product-card" data-category="jewelry">
+            <img src="assets/img/BoucleOreil.jpeg" alt="Boucles d'oreilles">
+            <h3>Boucles d'Oreilles</h3>
+            <p>Boucles pendantes en or rose</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(67 avis)</span>
+            </div>
+            <p class="price">22 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Boucles d\'Oreilles', '22000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <div class="product-card" data-category="jewelry">
+            <img src="assets/img/Bracelet.jpeg" alt="Bracelet">
+            <h3>Bracelet Fin</h3>
+            <p>Un bijou discret et raffiné à porter au quotidien</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(41 avis)</span>
+            </div>
+            <p class="price">15 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Bracelet Fin', '15000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <!-- Montres -->
+        <div class="product-card" data-category="watches">
+            <div class="product-badge">Nouveau</div>
+            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=500&q=80" alt="Montre">
+            <h3>Montre Classique</h3>
+            <p>L'alliance parfaite entre précision et style</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(73 avis)</span>
+            </div>
+            <p class="price">45 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Montre Classique', '45000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <div class="product-card" data-category="watches">
+            <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=500&q=80" alt="Montre sport">
+            <h3>Montre Sport</h3>
+            <p>Design moderne pour les sportifs</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(29 avis)</span>
+            </div>
+            <p class="price">38 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Montre Sport', '38000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <!-- Accessoires -->
+        <div class="product-card" data-category="accessories">
+            <img src="assets/img/Lunette.jpeg" alt="Lunettes">
+            <h3>Lunettes de Soleil</h3>
+            <p>Protection UV et style assuré</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(56 avis)</span>
+            </div>
+            <p class="price">20 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Lunettes de Soleil', '20000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <div class="product-card" data-category="accessories">
+            <div class="product-badge">Promo</div>
+            <img src="assets/img/ceinture.jpeg" alt="Ceinture">
+            <h3>Ceinture en Cuir</h3>
+            <p>Ceinture élégante en cuir véritable</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(23 avis)</span>
+            </div>
+            <p class="price"><span class="old-price">15 000 Ar</span> 12 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Ceinture en Cuir', '12000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <div class="product-card" data-category="accessories">
+            <img src="assets/img/foulard.jpeg" alt="Foulard">
+            <h3>Foulard Soie</h3>
+            <p>Foulard en soie véritable imprimé</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(38 avis)</span>
+            </div>
+            <p class="price">14 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Foulard Soie', '14000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+
+        <div class="product-card" data-category="accessories">
+            <img src="assets/img/chapeau.jpeg" alt="Chapeau">
+            <h3>Chapeau Panama</h3>
+            <p>Chapeau chic pour les journées ensoleillées</p>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(19 avis)</span>
+            </div>
+            <p class="price">16 000 Ar</p>
+            <button class="btn-wa" onclick="openOrderModal('Chapeau Panama', '16000')">
+                <i class="fab fa-whatsapp"></i> Commander
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <div class="section-title"><h2>Contactez-nous</h2></div>
+    <div style="text-align: center; max-width: 600px; margin: auto;">
+        <p>Une question ? Une commande spéciale ? Nous sommes à votre écoute.</p>
+    </div>
+    <div class="contact-buttons">
+        <a href="https://wa.me/261347786170" class="btn-contact btn-whatsapp-main" target="_blank">
+            <i class="fab fa-whatsapp"></i> 034 77 86 170
+        </a>
+        <a href="mailto:steevyrakotoarivelo28@gmail.com" class="btn-contact btn-email">
+            <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://www.instagram.com/lecoinmode" class="btn-contact btn-insta" target="_blank">
+            <i class="fab fa-instagram"></i> Le Coin Mode
+        </a>
+    </div>
+</section>
+
+<!-- Modal de commande -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-shopping-cart"></i> Passer commande</h2>
+            <span class="close" onclick="closeOrderModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="productName"><i class="fas fa-tag"></i> Produit :</label>
+                    <input type="text" id="productName" name="productName" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity"><i class="fas fa-sort-amount-up"></i> Quantité :</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="unitPrice"><i class="fas fa-money-bill"></i> Prix unitaire :</label>
+                    <input type="text" id="unitPrice" name="unitPrice" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="totalPrice"><i class="fas fa-calculator"></i> Prix total :</label>
+                    <input type="text" id="totalPrice" name="totalPrice" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerName"><i class="fas fa-user"></i> Votre nom :</label>
+                    <input type="text" id="customerName" name="customerName" placeholder="Entrez votre nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerPhone"><i class="fas fa-phone"></i> Téléphone :</label>
+                    <input type="tel" id="customerPhone" name="customerPhone" placeholder="Entrez votre numéro" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address"><i class="fas fa-map-marker-alt"></i> Adresse de livraison :</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Entrez votre adresse complète" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes"><i class="fas fa-comment"></i> Notes supplémentaires :</label>
+                    <textarea id="notes" name="notes" rows="2" placeholder="Instructions particulières..."></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-cancel" onclick="closeOrderModal()">Annuler</button>
+            <button type="button" class="btn-confirm" onclick="sendOrderToWhatsApp()">Confirmer la commande <i class="fab fa-whatsapp"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- Notifications -->
+<div id="notification" class="notification"></div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; <span id="date"></span> <strong>Le Coin Mode</strong> ❤️ - Tous droits réservés.</p>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
